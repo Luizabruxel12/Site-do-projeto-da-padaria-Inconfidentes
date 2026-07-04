@@ -1,0 +1,6 @@
+/* CÓDIGO DOS NOSSOS DESTAQUES */
+.destaques{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}

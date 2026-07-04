@@ -1,0 +1,19 @@
+/* CÓDIGO DA IMAGEM PRINCIPAL */
+.imagemPricipal{
+    background: linear-gradient(#463d2e55, #5c3a2186),
+    url('../src/imagem_de_inicio.png');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 30px auto;
+    padding: 20px;
+    margin-top: 20px;
+}
+.tituloImagem{
+    font-size: 24px;
+}

@@ -1,0 +1,11 @@
+@import url('./style/cabeçalho.css');
+@import url('./style/footer.css');
+@import url('./style/imagemPrincipal.css');
+@import url('./style/nossosDestaques.css');
+
+body{
+    margin: 0;
+}
+
+
+

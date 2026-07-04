@@ -1,0 +1,11 @@
+Este projeto é realizado para um trabalho do segundo trimestre da matéria de back end.
+Neste projeto é preciso fazer um programa para uma padaria, com a tela inicial, o cardápio, 
+a tela de fechamento de pedido e pagamento. 
+Sendo todo o projeto com banco de dados e funcional, até o dia 09/07/26.
+
+O modelo foi preferível fazer web e também mobile-first, no qual o cliente do celular é priorizado.
+
+
+O menu hamburguer veio para facilitar o método do menu, economizando espaço e facilitando o uso do 
+usuário.
+
