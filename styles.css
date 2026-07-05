@@ -2,9 +2,11 @@
 @import url('./style/footer.css');
 @import url('./style/imagemPrincipal.css');
 @import url('./style/nossosDestaques.css');
+@import url('./style/diferenciaisDaPadaria.css');
 
 body{
     margin: 0;
+    background-color: #FDEBD3;
 }
 
 

@@ -1,0 +1,32 @@
+.diferencialDaPadaria .diferenciais{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.diferenciais{
+    width: calc((100% - (12px * 2)) / 3); 
+}
+
+.diferencialDaPadaria{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    justify-content: center;
+}
+.tituloDoDiferencial{
+    display: flex;
+    box-sizing: border-box; 
+    border-radius: 15px;
+    align-items: center;
+    gap: 8px;
+}
+.tituloDoDiferencial img{
+    width: 30px;
+    height: 30px;
+}
+.textoDoDiferencial{
+   display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+}
