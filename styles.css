@@ -10,4 +10,16 @@ body{
 }
 
 
-
+.botaoVisiteNos{
+    text-decoration: none;
+    background-color: #CC750C;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.botaoVisiteNos a{
+    color:inherit;
+    text-decoration: none;
+    color: #fff;
+}

@@ -1,6 +1,6 @@
 /* CÓDIGO DA IMAGEM PRINCIPAL */
 .imagemPricipal{
-    background: linear-gradient(#463d2e55, #5c3a2186),
+    background: linear-gradient(#57340355, #5c3a2100),
     url('../src/imagem_de_inicio.png');
     background-size: cover;
     background-position: center;
@@ -16,4 +16,19 @@
 }
 .tituloImagem{
     font-size: 24px;
+}
+.imagemFinal{
+    background: linear-gradient(#57340355, #5c3a2100),
+    url('../src/imagem_final_do_index.png');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 30px auto;
+    padding: 20px;
+    margin-top: 20px;
 }
