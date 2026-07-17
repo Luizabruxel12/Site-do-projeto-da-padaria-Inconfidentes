@@ -3,23 +3,48 @@
 @import url('./style/imagemPrincipal.css');
 @import url('./style/nossosDestaques.css');
 @import url('./style/diferenciaisDaPadaria.css');
+@import url('./style/barraDePesquisa.css');
+
+:root{
+    --corBase:#F9ECDA;
+    --corDestaque: #C98A2E;
+    --marromEscuro: #4A220F;
+    --marromRodape: #261208;
+}
 
 body{
     margin: 0;
     background-color: #FDEBD3;
 }
+.sacolaDoCatalogo img{
+    width: 30px;
+    height: 30px;
+}
 
 
-.botaoVisiteNos{
-    text-decoration: none;
-    background-color: #CC750C;
-    padding: 10px 20px;
-    border-radius: 5px;
+/* SESSÕES DO CARDÁPIO */
+.sessoesProdutos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15px;
+    width: 100%;
+}
+.sessoesPd{
+    background-color: #fff;
     border: none;
-    cursor: pointer;
-}
-.botaoVisiteNos a{
-    color:inherit;
+    padding: 2px 10px;
+    font-size: 13px;
+    border-radius: 10px;
+    transition: all 0.3s ease; 
+    color: var(--marromEscuro);
     text-decoration: none;
-    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    width: calc(25% - 12px); 
+    box-sizing: border-box;
 }
+

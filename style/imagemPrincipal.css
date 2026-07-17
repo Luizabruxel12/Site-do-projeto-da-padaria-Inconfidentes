@@ -5,7 +5,7 @@
     background-size: cover;
     background-position: center;
     height: 200px;
-    width: 100%;
+    width: 90%;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -17,13 +17,16 @@
 .tituloImagem{
     font-size: 24px;
 }
+
+
+/* CÓDIGO DA IMAGEM FINAL */
 .imagemFinal{
     background: linear-gradient(#57340355, #5c3a2100),
     url('../src/imagem_final_do_index.png');
     background-size: cover;
     background-position: center;
-    height: 200px;
-    width: 100%;
+    height: 250px;
+    width: 90%;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -31,4 +34,17 @@
     margin: 30px auto;
     padding: 20px;
     margin-top: 20px;
+}
+.botaoVisiteNos{
+    text-decoration: none;
+    background-color: #CC750C;
+    padding: 10px 10px;
+    width: 150px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color:inherit;
+    color: #fff;
+    text-align: center;
+    font-family: Arial;
 }

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio da Padaria</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script type="module" src="../script.js" defer></script>
+    <script type="module" src="../script/cabeçalho.js" defer></script>
+</head>
+<body>
+    <header class="cabeçalho">
+        <!-- CABEÇALHO COM MENU E SACOLA -->
+        <div>
+            <nav class="navBar">
+                <div class="sacolaDoCatalogo">
+                    <a href="../html/sacolaDePedidos.html"><img src="../src/sacola_de_compras.png"></a>
+                </div>
+                <div class="logo">
+                    <a href="../index.html"><img src="../src/logo_do_site.png"></a>
+                </div>
+                
+                <div class="hambuguer" id="menuHamburguer">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="./cardapio.html" class="nav-link">CARDÁPIO</a></li>
+                    <li class="nav-item"><a href="./sobreNos.html" class="nav-link">SOBRE NÓS</a></li>
+                    <li class="nav-item"><a href="./contato.html" class="nav-link">CONTATO</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="destaques">
+            <div class="linhaSeparacao"></div>
+                <p>Cardápio</p>
+            <div class="linhaSeparacao"></div>
+        </div>
+
+        <!-- BARRA DE PESQUISA -->
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder=" Pesquisar...">
+        </div>
+
+        <!-- SESSÕES DE PRODUTO -->
+        <div class="sessoesProdutos">
+            <a href="#" class="sessoesPd">Tudo</a>
+            <a href="#" class="sessoesPd">Pão de Queijo</a>
+            <a href="#" class="sessoesPd">Café</a>
+            <a href="#" class="sessoesPd">Cappuccino</a>
+            <a href="#" class="sessoesPd">Bebidas</a>
+            <a href="#" class="sessoesPd">Salgadinhos</a>
+            <a href="#" class="sessoesPd">Doces</a>
+        </div>
+
+        <!-- CARDÁPIO -->
+        <div class="cardapio">
+        </div>
+
+    </main>
+</body>
+</html>

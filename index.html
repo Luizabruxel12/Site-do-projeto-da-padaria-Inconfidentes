@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Padaria Inconfidentes</title>
     <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./script.js" defer></script>
+    <script type="module" src="./script/cabeçalho.js" defer></script>
 </head>
 <body>
     <header class="cabeçalho">
@@ -12,10 +14,10 @@
         <div>
             <nav class="navBar">
                 <div class="sacolaDoCatalogo">
-                    <img src="./src/sacola_de_compras.png">
+                    <a href="./html/sacolaDePedidos.html"><img src="./src/sacola_de_compras.png"></a>
                 </div>
                 <div class="logo">
-                    <img src="./src/logo_do_site.png">
+                    <a href="./index.html"><img src="../src/logo_do_site.png"></a>
                 </div>
                 
                 <div class="hambuguer" id="menuHamburguer">
@@ -26,10 +28,10 @@
                 </div>
 
                 <ul class="nav-menu" id="navMenu">
-                    <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">CARDÁPIO</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">SOBRE NÓS</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">CONTATO</a></li>
+                    <li class="nav-item"><a href="./index.html" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="./html/cardapio.html" class="nav-link">CARDÁPIO</a></li>
+                    <li class="nav-item"><a href="./html/sobreNos.html" class="nav-link">SOBRE NÓS</a></li>
+                    <li class="nav-item"><a href="./html/contato.html" class="nav-link">CONTATO</a></li>
                 </ul>
             </nav>
         </div>
@@ -138,14 +140,26 @@
         <div class="imagemFinal">
             <p class="tituloImagem">Mais que um café, <br>um lugar para criar <br>boas memórias.</p>
             <p>Venha nos visitar e aproveite <br>momentos especiais</p>
-            <button class="botaoVisiteNos"><a href="./html/cardapio.html">VER CARDÁPIO</a></button>
-            
+            <a href="./html/cardapio.html" class="botaoVisiteNos">VER CARDÁPIO</a>
         </div>
     </main>
-    <footer>
-
+    <footer class="rodape">
+        <div class="informacoesFinais">
+            <p class="sigaNos">Siga-nos</p>
+            <div class="redesSociais">
+                <img src="./src/icone_insta.png" >
+                <img src="./src/icone_face.png" >
+                <img src="./src/icone_zap.png" >
+            </div>
+        </div>
+        <div class="informacoesFinais">
+            <p class="horarioTitulo">Horário de funcionamento</p>
+            <p class="informacoes">Segunda a Sexta: 7h ás 20h<br>Sábado e Domingo: 8h ás 18h</p>
+        </div>
+        <div class="informacoesFinais">
+            <p class="endereçoTitulo">Endereço</p>
+            <p class="informacoes">Rua inconfidentes, 123<br>Centro - Sua cidade/MG</p>
+        </div>
     </footer>
-    <script src="./script.js"></script>
-    <script src="./script/cabeçalho.js"></script>
 </body>
 </html>

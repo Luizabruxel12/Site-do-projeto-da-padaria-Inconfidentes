@@ -1,0 +1,23 @@
+.rodape{
+    background-color: var(--marromRodape);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: #FFFAFA;
+    font-size: 11px;
+    justify-content: space-between;
+}
+.informacoesFinais{
+    width: calc((100% - (12px * 2)) / 3); 
+}
+.sigaNos, .horarioTitulo, .endereçoTitulo{
+    display: flex;
+    box-sizing: border-box; 
+    border-radius: 15px;
+    justify-content: space-around;
+    gap: 8px;
+}
+.redesSociais{
+    display: flex;
+    justify-content: space-around;
+}

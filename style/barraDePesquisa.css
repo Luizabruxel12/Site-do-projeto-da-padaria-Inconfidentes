@@ -1,0 +1,19 @@
+.search-container {
+    padding: 15px;
+}
+
+.search-bar {
+    width: 350px;
+    padding: 0.6rem 0 0.6rem 2.5rem;
+    font-size: 14px;
+    border-radius: 20px;
+    border: none;
+    background-color: #fff;
+    display: flex;
+    
+    /* IMAGEM DA LUPA */
+    background-image: url('../src/icone_lupa.png'); 
+    background-repeat: no-repeat;
+    background-position: 10px center; 
+    background-size: 18px; 
+}

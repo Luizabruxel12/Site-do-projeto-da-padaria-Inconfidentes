@@ -3,11 +3,14 @@
     display: flex;
     justify-content: space-between;
     text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--marromEscuro);
 }
 
 .linhaSeparacao{
-    border-top: solid 1px #C98A2E;
-    width: 200px;
+    border-top: solid 1px var(--corDestaque);
+    width: 100px;
     align-self: center;
 }
 
