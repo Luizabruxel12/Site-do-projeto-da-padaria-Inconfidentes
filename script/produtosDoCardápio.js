@@ -180,7 +180,7 @@ export const itens = [
         id:26,
         categoria: "salgadinhos",
         imagem: "../src/esfilha.png",
-        titulo: "Esfilha",
+        titulo: "Esfiha",
         preco: "R$ 4,00"
     },
     {
@@ -236,23 +236,18 @@ function salvarNoNavegador(id, titulo, preco, novaQuantidade) {
     try {
         let carrinhoLocal = JSON.parse(localStorage.getItem('carrinhoTemporario')) || [];
         
-        // Tratamento do preço para garantir que vire um número real (float)
         let precoNumerico = typeof preco === 'string' 
             ? parseFloat(preco.replace('R$', '').replace(/\./g, '').replace(',', '.').trim()) 
             : preco;
 
-        // Se a nova quantidade for menor ou igual a zero, removemos o item do carrinho
         if (novaQuantidade <= 0) {
             carrinhoLocal = carrinhoLocal.filter(item => item.id !== id);
         } else {
-            // Verifica se o produto já está na lista salva no navegador
             let produtoExistente = carrinhoLocal.find(item => item.id === id);
             
             if (produtoExistente) {
-                // Atualiza diretamente para a nova quantidade definida nos botões
                 produtoExistente.quantidade = novaQuantidade;
             } else {
-                // Se for a primeira vez do item, cria o registro sem a propriedade da imagem
                 carrinhoLocal.push({
                     id: id,
                     nome: titulo,
@@ -262,7 +257,6 @@ function salvarNoNavegador(id, titulo, preco, novaQuantidade) {
             }
         }
 
-        // Salva a lista final (atualizada ou com o item removido) de volta no navegador
         localStorage.setItem('carrinhoTemporario', JSON.stringify(carrinhoLocal));
 
     } catch (erroLocal) {
@@ -271,5 +265,91 @@ function salvarNoNavegador(id, titulo, preco, novaQuantidade) {
     }
 }
 
+// FUNÇÃO AUXILIAR DE LEITURA
+function obterQuantidadeSalva(idItem) {
+    const carrinho = JSON.parse(localStorage.getItem('carrinhoTemporario')) || [];
+    const itemSalvo = carrinho.find(item => item.id === idItem);
+    return itemSalvo ? itemSalvo.quantidade : 0;
+}
 
-// FUNÇÃO PARA RENDERIZAR OS PRODUTOS
+// FUNÇÃO PARA RENDERIZAR OS PRODUTOS (Variáveis e classes corrigidas)
+function renderizarCardapio(cardapio, sessoesCategorias, itens) { 
+    if (!cardapio) return; 
+    
+    cardapio.innerHTML = ""; 
+    
+    // Corrigido: Agora usa sessoesCategorias que vem do parâmetro
+    Object.keys(sessoesCategorias).forEach((chaveCategoria) => { 
+        const produtosDaCategoria = itens.filter(item => item.categoria === chaveCategoria); 
+        if (produtosDaCategoria.length === 0) return; 
+        
+        const secaoDivisao = document.createElement("div"); 
+        secaoDivisao.classList.add("gridProdutos"); 
+        
+        // Corrigido: Agora usa sessoesCategorias que vem do parâmetro
+        const dadosCategoria = sessoesCategorias[chaveCategoria]; 
+        
+        // Modificado: grade-produtos alterado para cadeiaProdutos
+        secaoDivisao.innerHTML = ` 
+            <h2 id="${dadosCategoria.id}" class="tituloDaSessao">${dadosCategoria.titulo}</h2> 
+            <div class="cadeiaProdutos"></div> 
+        `; 
+        
+        // Modificado: Selecionando a nova classe cadeiaProdutos
+        const gradeProdutos = secaoDivisao.querySelector(".cadeiaProdutos"); 
+        
+        produtosDaCategoria.forEach((item) => { 
+            const card = document.createElement("div"); 
+            
+            // Modificado: paoQ alterado para produtos
+            card.classList.add("produtos"); 
+            
+            let quantidade = obterQuantidadeSalva(item.id);
+            
+            card.innerHTML = ` 
+                <div class="produtosClicaveis" data-id="${item.id}"> 
+                    <img src="${item.imagem}" alt="${item.titulo}"> 
+                    <div class="produtosContainer"> 
+                        <p class="tituloProduto">${item.titulo}</p> 
+                        <p class="precoProduto">${item.preco}</p> 
+                    </div> 
+                </div> 
+                <div class="produtosContainer"> 
+                    <div class="complementosProdutos"> 
+                        <div class="controle-quantidade">
+                            <button class="comprar">Comprar</button>
+                            <button class="btn-menos">-</button>
+                            <span class="contador-qtd">${quantidade}</span>
+                            <button class="btn-mais">+</button>
+                        </div>
+                    </div> 
+                </div> 
+            `; 
+            
+            const btnMais = card.querySelector(".btn-mais");
+            const btnMenos = card.querySelector(".btn-menos");
+            const contadorExibicao = card.querySelector(".contador-qtd");
+            
+            btnMais.addEventListener("click", () => {
+                quantidade++;
+                contadorExibicao.textContent = quantidade;
+                salvarNoNavegador(item.id, item.titulo, item.preco, quantidade);
+            });
+            
+            btnMenos.addEventListener("click", () => {
+                if (quantidade > 0) {
+                    quantidade--;
+                    contadorExibicao.textContent = quantidade;
+                    salvarNoNavegador(item.id, item.titulo, item.preco, quantidade);
+                }
+            });
+            
+            gradeProdutos.appendChild(card); 
+        }); 
+        
+        // Corrigido: Alterado cardapioPrincipal para cardapio (parâmetro correto)
+        cardapio.appendChild(secaoDivisao); 
+    }); 
+}
+
+renderizarCardapio(cardapio, sessoesCategorias, itens);

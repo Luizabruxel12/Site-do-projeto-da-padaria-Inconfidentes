@@ -4,6 +4,7 @@
 @import url('./style/nossosDestaques.css');
 @import url('./style/diferenciaisDaPadaria.css');
 @import url('./style/barraDePesquisa.css');
+@import url('./style/cardapioDaPadaria.css');
 
 :root{
     --corBase:#F9ECDA;

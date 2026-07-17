@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardápio da Padaria</title>
+    <title>Nossos Produtos</title>
     <link rel="stylesheet" href="../styles.css">
     <script type="module" src="../script.js" defer></script>
     <script type="module" src="../script/cabeçalho.js" defer></script>
+    <script type="module" src="../script/produtosDoCardápio.js" defer></script>
 </head>
 <body>
     <header class="cabeçalho">
@@ -29,7 +30,7 @@
 
                 <ul class="nav-menu" id="navMenu">
                     <li class="nav-item"><a href="../index.html" class="nav-link">HOME</a></li>
-                    <li class="nav-item"><a href="./cardapio.html" class="nav-link">CARDÁPIO</a></li>
+                    <li class="nav-item"><a href="./cardapio.html" class="nav-link">NOSSOS PRODUTOS</a></li>
                     <li class="nav-item"><a href="./sobreNos.html" class="nav-link">SOBRE NÓS</a></li>
                     <li class="nav-item"><a href="./contato.html" class="nav-link">CONTATO</a></li>
                 </ul>
@@ -50,17 +51,17 @@
 
         <!-- SESSÕES DE PRODUTO -->
         <div class="sessoesProdutos">
-            <a href="#" class="sessoesPd">Tudo</a>
-            <a href="#" class="sessoesPd">Pão de Queijo</a>
-            <a href="#" class="sessoesPd">Café</a>
-            <a href="#" class="sessoesPd">Cappuccino</a>
-            <a href="#" class="sessoesPd">Bebidas</a>
-            <a href="#" class="sessoesPd">Salgadinhos</a>
-            <a href="#" class="sessoesPd">Doces</a>
+            <a href="./cardapio.html" class="sessoesPd">Tudo</a>
+            <a href="#sessaoPaoDeQueijo" class="sessoesPd">Pão de Queijo</a>
+            <a href="#sessaocafes" class="sessoesPd">Café</a>
+            <a href="#sessaoCappuccino" class="sessoesPd">Cappuccino</a>
+            <a href="#sessaoBebidas" class="sessoesPd">Bebidas</a>
+            <a href="#sessaoSalgadinhos" class="sessoesPd">Salgadinhos</a>
+            <a href="#sessaoDoces" class="sessoesPd">Doces</a>
         </div>
 
         <!-- CARDÁPIO -->
-        <div class="cardapio">
+        <div id="cardapio">
         </div>
 
     </main>
