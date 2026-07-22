@@ -1,0 +1,67 @@
+.tituloCarrinho{
+    padding: 0 15px;
+    color: var(--marromRodape);
+}
+.sacolaCarrinho{
+    background-color: white;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.espacoItemCarrinho{
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid var(--corDestaque);
+}
+.itemImagem{
+    display: flex;
+}
+.imagemCard{
+    border-radius: 10px;
+    padding-right: 15px;
+}
+.infoCarrinho{
+    background-color: var(--corBase);
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+}
+.itemQuantidadeEExclusao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.botao-quantidade{
+    border: none;
+    background-color: var(--corBase);
+    cursor: pointer;
+}
+.botaoDeletar{
+    border: none;
+    background-color: var(--corBase);
+}
+
+
+#totalValor{
+    color: var(--corDestaque);
+}
+
+.valoresResumo{
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.valores{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.valores p {
+    margin: 0; 
+    padding: 0;
+}
+.valorTotal{
+    font-size: 24px;
+}

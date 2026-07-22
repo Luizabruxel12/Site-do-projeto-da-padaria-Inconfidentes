@@ -5,6 +5,7 @@
 @import url('./style/diferenciaisDaPadaria.css');
 @import url('./style/barraDePesquisa.css');
 @import url('./style/cardapioDaPadaria.css');
+@import url('./style/carrinho.css');
 
 :root{
     --corBase:#F9ECDA;

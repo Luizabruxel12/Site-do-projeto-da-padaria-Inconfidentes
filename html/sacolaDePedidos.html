@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de compras</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../script/produtosDoCardápio.js" defer></script>
+    <script src="../script/sacolaDosPedidos.js" defer></script>
+</head>
+<body>
+    <h2 class="tituloCarrinho">Seu carrinho</h2>
+    
+    <div class="sacolaCarrinho">
+        <!-- Onde os produtos serão renderizados -->
+        <div id="itensCarrinho"></div>
+
+        <!-- Resumo de Valores -->
+        <div class="valoresResumo">
+            <div class="valores">
+                <p>Subtotal:</p> 
+                <span id="subtotalValor">R$ 0,00</span></div>
+            <div class="valores">
+                <p>Entrega: </p>
+                <span id="entregaValor">R$ 0,00</span></div>
+            <div class="valores">
+                <p>Desconto: </p>
+                <span id="descontoValor">R$ 0,00</span></div>
+            <!-- ADICIONADO: Linha do Total Geral -->
+            <div class="valores valorTotal">
+                <p><strong>Total:</strong></p>
+                <span id="totalValor">R$ 0,00</span></div>
+        </div>
+
+        <!-- ADICIONADO: Botão para prosseguir para o pagamento -->
+        <div class="botoesCarrinho">
+            <button onclick="irParaPagamento()" class="botaoFinalizar">Ir para o Pagamento</button>
+        </div>
+    </div>
+</body>
+</html>

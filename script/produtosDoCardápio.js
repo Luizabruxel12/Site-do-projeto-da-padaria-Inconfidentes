@@ -232,7 +232,7 @@ const sessoesCategorias = {
 const cardapio = document.getElementById("cardapio");
 
 // SALVANDO NO NAVEGADOR
-function salvarNoNavegador(id, titulo, preco, novaQuantidade) {
+function salvarNoNavegador(id, titulo, preco, novaQuantidade, imagem) {
     try {
         let carrinhoLocal = JSON.parse(localStorage.getItem('carrinhoTemporario')) || [];
         
@@ -252,7 +252,8 @@ function salvarNoNavegador(id, titulo, preco, novaQuantidade) {
                     id: id,
                     nome: titulo,
                     preco: precoNumerico,
-                    quantidade: novaQuantidade
+                    quantidade: novaQuantidade,
+                    imagem: imagem
                 });
             }
         }
@@ -277,8 +278,7 @@ function renderizarCardapio(cardapio, sessoesCategorias, itens) {
     if (!cardapio) return; 
     
     cardapio.innerHTML = ""; 
-    
-    // Corrigido: Agora usa sessoesCategorias que vem do parâmetro
+
     Object.keys(sessoesCategorias).forEach((chaveCategoria) => { 
         const produtosDaCategoria = itens.filter(item => item.categoria === chaveCategoria); 
         if (produtosDaCategoria.length === 0) return; 
@@ -286,22 +286,18 @@ function renderizarCardapio(cardapio, sessoesCategorias, itens) {
         const secaoDivisao = document.createElement("div"); 
         secaoDivisao.classList.add("gridProdutos"); 
         
-        // Corrigido: Agora usa sessoesCategorias que vem do parâmetro
         const dadosCategoria = sessoesCategorias[chaveCategoria]; 
         
-        // Modificado: grade-produtos alterado para cadeiaProdutos
         secaoDivisao.innerHTML = ` 
             <h2 id="${dadosCategoria.id}" class="tituloDaSessao">${dadosCategoria.titulo}</h2> 
             <div class="cadeiaProdutos"></div> 
         `; 
         
-        // Modificado: Selecionando a nova classe cadeiaProdutos
         const gradeProdutos = secaoDivisao.querySelector(".cadeiaProdutos"); 
         
         produtosDaCategoria.forEach((item) => { 
             const card = document.createElement("div"); 
             
-            // Modificado: paoQ alterado para produtos
             card.classList.add("produtos"); 
             
             let quantidade = obterQuantidadeSalva(item.id);
@@ -326,28 +322,43 @@ function renderizarCardapio(cardapio, sessoesCategorias, itens) {
                 </div> 
             `; 
             
+            const btnComprar = card.querySelector(".comprar");
             const btnMais = card.querySelector(".btn-mais");
             const btnMenos = card.querySelector(".btn-menos");
             const contadorExibicao = card.querySelector(".contador-qtd");
             
+            // NOVO: Ação do botão Comprar (Adiciona 1 unidade e vai para o carrinho)
+            btnComprar.addEventListener("click", () => {
+                if (quantidade === 0) {
+                    quantidade = 1;
+                    contadorExibicao.textContent = quantidade;
+                }
+                // Importante: Passando "item.imagem" como 5º parâmetro para salvar no localStorage
+                salvarNoNavegador(item.id, item.titulo, item.preco, quantidade, item.imagem);
+                
+                // Redireciona o usuário para a página do carrinho (ajuste o caminho se necessário)
+                window.location.href = "../html/carrinho.html"; 
+            });
+            
             btnMais.addEventListener("click", () => {
                 quantidade++;
                 contadorExibicao.textContent = quantidade;
-                salvarNoNavegador(item.id, item.titulo, item.preco, quantidade);
+                // Adicionado item.imagem no final
+                salvarNoNavegador(item.id, item.titulo, item.preco, quantidade, item.imagem);
             });
             
             btnMenos.addEventListener("click", () => {
                 if (quantidade > 0) {
                     quantidade--;
                     contadorExibicao.textContent = quantidade;
-                    salvarNoNavegador(item.id, item.titulo, item.preco, quantidade);
+                    // Adicionado item.imagem no final
+                    salvarNoNavegador(item.id, item.titulo, item.preco, quantidade, item.imagem);
                 }
             });
             
             gradeProdutos.appendChild(card); 
         }); 
         
-        // Corrigido: Alterado cardapioPrincipal para cardapio (parâmetro correto)
         cardapio.appendChild(secaoDivisao); 
     }); 
 }
