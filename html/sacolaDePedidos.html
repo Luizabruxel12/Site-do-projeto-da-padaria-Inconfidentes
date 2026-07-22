@@ -10,10 +10,32 @@
 </head>
 <body>
     <h2 class="tituloCarrinho">Seu carrinho</h2>
+    <div class="qtdItensCarrinho">
+        <img src="../src/itensDaSacola.png">
+        <p id="QtdItensSacola">0 produtos adicionados</p>
+    </div>
     
     <div class="sacolaCarrinho">
         <!-- Onde os produtos serão renderizados -->
         <div id="itensCarrinho"></div>
+
+
+        <div>
+            <div class="adicionarCupom" onclick="alternarCupom()">
+                <img src="../src/cupomDeDesconto.png" alt="Cupom">
+                <p>Adicionar cupom de desconto</p>
+                <img src="../src/flechaBaixo.png" class="iconeFlecha" alt="Flecha">
+            </div>
+            <div id="campoCupom" class="inserirCodigo">
+                <p>Tem um cupom? Insira aqui!</p>
+                <div class="inputGrupo">
+                    <input type="text" id="cupomTexto" placeholder="Digite o código do cupom">
+                    <button onclick="validarCupom()">Aplicar</button>
+                </div>
+                <div id="mensagemCupom" class="mensagem-cupom"></div>
+            </div>
+        </div>
+
 
         <!-- Resumo de Valores -->
         <div class="valoresResumo">
@@ -34,7 +56,8 @@
 
         <!-- ADICIONADO: Botão para prosseguir para o pagamento -->
         <div class="botoesCarrinho">
-            <button onclick="irParaPagamento()" class="botaoFinalizar">Ir para o Pagamento</button>
+            <button onclick="cancelarPedido()" class="botaoCancelar">Cancelar pedido</button>
+            <button onclick="irParaPagamento()" class="botaoFinalizar">Continuar pedido</button>
         </div>
     </div>
 </body>

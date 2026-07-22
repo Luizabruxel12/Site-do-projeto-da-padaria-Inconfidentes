@@ -9,9 +9,12 @@
 
 :root{
     --corBase:#F9ECDA;
+    --corRosaDiscreto: #FFF4E4;
     --corDestaque: #C98A2E;
     --marromEscuro: #4A220F;
     --marromRodape: #261208;
+    --vermelho: #B40404;
+    --verde: #22B65D;
 }
 
 body{
