@@ -6,6 +6,8 @@
 @import url('./style/barraDePesquisa.css');
 @import url('./style/cardapioDaPadaria.css');
 @import url('./style/carrinho.css');
+@import url('./style/pagamento.css');
+@import url('./style/contato.css');
 
 :root{
     --corBase:#F9ECDA;

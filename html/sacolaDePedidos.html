@@ -9,6 +9,7 @@
     <script src="../script/sacolaDosPedidos.js" defer></script>
 </head>
 <body>
+    <!-- TÍTULO E QUANTIDADE DE ITENS ADICIONADOS -->
     <h2 class="tituloCarrinho">Seu carrinho</h2>
     <div class="qtdItensCarrinho">
         <img src="../src/itensDaSacola.png">
@@ -16,10 +17,10 @@
     </div>
     
     <div class="sacolaCarrinho">
-        <!-- Onde os produtos serão renderizados -->
+        <!-- DIV ONDE A LISTA DOS PRODUTOS SERÁ MOSTRADA -->
         <div id="itensCarrinho"></div>
 
-
+        <!-- CUPOM -->
         <div>
             <div class="adicionarCupom" onclick="alternarCupom()">
                 <img src="../src/cupomDeDesconto.png" alt="Cupom">
@@ -37,7 +38,7 @@
         </div>
 
 
-        <!-- Resumo de Valores -->
+        <!-- RESUMO DOS VALORES -->
         <div class="valoresResumo">
             <div class="valores">
                 <p>Subtotal:</p> 
@@ -48,13 +49,12 @@
             <div class="valores">
                 <p>Desconto: </p>
                 <span id="descontoValor">R$ 0,00</span></div>
-            <!-- ADICIONADO: Linha do Total Geral -->
             <div class="valores valorTotal">
                 <p><strong>Total:</strong></p>
                 <span id="totalValor">R$ 0,00</span></div>
         </div>
 
-        <!-- ADICIONADO: Botão para prosseguir para o pagamento -->
+        <!-- BOTÕES PARA PROSSEGUIR COM O PEDIDO -->
         <div class="botoesCarrinho">
             <button onclick="cancelarPedido()" class="botaoCancelar">Cancelar pedido</button>
             <button onclick="irParaPagamento()" class="botaoFinalizar">Continuar pedido</button>

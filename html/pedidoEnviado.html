@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra realizada!</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../script/cabeçalho.js" defer></script>
+    <script src="../script/sacolaDosPedidos.js" defer></script>
+    <script src="../script.js" defer></script>
+    <script src="../script/pagamento.js" defer></script>
+</head>
+<body>
+    <header class="cabeçalho">
+        <!-- CABEÇALHO COM MENU E CARRINHO -->
+        <div>
+            <nav class="navBar">
+                <div class="sacolaDoCatalogo">
+                    <a href="../html/sacolaDePedidos.html"><img src="../src/sacolaCarrinho.png"></a>
+                </div>
+                <div class="logo">
+                    <a href="../index.html"><img src="../src/logo_do_site.png"></a>
+                </div>
+                
+                <div class="hambuguer" id="menuHamburguer">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="./cardapio.html" class="nav-link">NOSSOS PRODUTOS</a></li>
+                    <li class="nav-item"><a href="./sobreNos.html" class="nav-link">SOBRE NÓS</a></li>
+                    <li class="nav-item"><a href="./contato.html" class="nav-link">CONTATO</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="linhaSeparacao"></div>
+
+    <div class="containerPagamento">
+        <div class="pedidoEnviado">
+            <img src="../src/itensDaSacola.png">
+            <h2>Pedido enviado <br>com sucesso!</h2>
+        </div>
+
+        <div class="linhaSeparacao"></div>
+
+        <div class="carinho">
+            <p>Obrigada pela sua preferência!</p>
+            <p>O seu pedido foi recebido e já está<br> sendo preparado com muito carinho.</p>
+        </div>
+
+        <div class="containerNumeroPedido">
+            <div>
+                <p>NÚMERO PEDIDO</p>
+                <p class="codigo" id="codigoPedido">#00000</p>
+            </div>
+            <div>
+                <p>DATA E HORA</p>
+                <p id="dataHoraPedido">00/00/0000 às 00:00H</p>
+            </div>
+            <div>
+                <p>TEMPO ESTIMADO</p>
+                <p id="tempoEstimado">00 a 00 minutos</p>
+            </div>
+        </div>
+
+
+        <div class="voltarInicio">
+            <img src="../src/icone_home.png">
+            <p><a href="../index.html">VOLTAR AO INÍCIO</a></p>
+        </div>
+    </div>
+
+    <div class="linhaSeparacao a"></div>
+    
+    <footer class="rodape">
+        <div class="informacoesFinais">
+            <p class="sigaNos">Siga-nos</p>
+            <div class="redesSociais">
+                <img src="../src/icone_insta.png" >
+                <img src="../src/icone_face.png" >
+                <img src="../src/icone_zap.png" >
+            </div>
+        </div>
+        <div class="informacoesFinais">
+            <p class="horarioTitulo">Horário de funcionamento</p>
+            <p class="informacoes">Segunda a Sexta: 7h ás 20h<br>Sábado e Domingo: 8h ás 18h</p>
+        </div>
+        <div class="informacoesFinais">
+            <p class="endereçoTitulo">Endereço</p>
+            <p class="informacoes">Rua inconfidentes, 123<br>Centro - Sua cidade/MG</p>
+        </div>
+    </footer>
+</body>
+</html>

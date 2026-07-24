@@ -1,0 +1,171 @@
+.linhaSeparacao{
+    margin: 20px 0 0 10px;
+    align-self: center;
+    border-bottom: solid 1px var(--corDestaque);
+    width: 95%;
+}
+.tituloPaginaPagamento{
+    text-align: center;
+    color: var(--marromEscuro);
+}
+.tituloPaginaPagamento h2{
+    font-weight: normal;
+}
+.containerPagamento{
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.tituloSeparacao{
+    display: flex;
+    background-color: var(--corBase);
+    margin: 40px 10px;
+    border-radius: 10px;
+    padding: 5px;
+    width: 70%;
+}
+.tituloSeparacao img{
+    align-self: center;
+    padding-right: 10px;
+}
+.informacoesCliente{
+    background-color: var(--corRosaDiscreto);
+    margin: 0 15px 10px 15px ;
+    padding: 5px;
+    cursor: text;
+}
+.informacoesCliente input{
+    border: none;
+    background-color: inherit;
+    width: 90%;
+    padding: 5px;
+}
+
+
+.containerFormasPagamento{
+    display: flex;
+    justify-content: space-around;
+}
+.formaPagamento{
+    display: flex;
+    background-color: var(--corBase);
+    padding: 11px;
+    justify-content: center;
+    border-radius: 20px;
+    font-weight: bold;
+     transition: all 0.2s ease;
+}
+.formaPagamento img{
+    width: 28px;
+    height: 28px;
+    align-self: center;
+    padding-right: 10px;
+}
+.formaPagamento:hover{
+    background-color: var(--corRosaDiscreto);
+    cursor: pointer;
+}
+.formaPagamento.selecionado{
+    background-color: var(--corRosaDiscreto);
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+
+
+.formaDeRecebimento{
+    display: flex;
+    justify-content: space-around;
+}
+.recebimento{
+    display: flex;
+    background-color: var(--corRosaDiscreto);
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    flex-direction: column;
+    align-items: center;
+}
+.recebimento img{
+    width: 18px;
+    height: 18px;
+    align-self: center;
+    padding-right: 10px;
+}
+.recebimento:hover{
+    background-color: var(--corBase);
+    cursor: pointer;
+}
+.recebimento.selecionado {
+    background-color: var(--corBase);
+}
+
+
+.botoesCarrinho button{
+    cursor: pointer;
+    margin-top: 15px;
+}
+.botoesCarrinho a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.pedidoEnviado{
+    padding: 20px;
+    text-align: center;
+}
+.pedidoEnviado img{
+    width: 40px;
+    height: 40px;
+}
+.carinho{
+    color: var(--marromEscuro);
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+
+.containerNumeroPedido{
+    margin: 20px 30px;
+    border: solid 1px var(--corDestaque);
+    border-radius: 10px;
+    padding: 30px;
+    color: var(--marromEscuro);
+}
+.containerNumeroPedido div{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-family: arial;
+}
+.codigo{
+    color: #FF5EA9;
+}
+
+.voltarInicio{
+    background-color: var(--corRosaDiscreto);
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    margin: 0 100px;
+    border-radius: 10px;
+    color: var(--marromEscuro);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.voltarInicio img{
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    padding-right: 10px;
+}
+.voltarInicio a{
+    color: inherit;
+    text-decoration: none;
+}
+.a{
+    margin: 30px 10px;
+}

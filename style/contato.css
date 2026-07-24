@@ -1,0 +1,50 @@
+.separacaoContato{
+    display: flex;
+}
+.linha{
+    border: solid 1px var(--corDestaque);
+    align-self: center;
+    width: 40%;
+}
+.entreEmContato{
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+}
+.entreEmContato h3{
+    font-family: arial;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+.entreEmContato form{
+    padding: 0 0 10px 20px;
+    color: var(--marromEscuro);
+    font-weight: bold;
+}
+form input{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--corRosaDiscreto);
+    width: 90%;
+}
+.mensagem{
+    padding: 10px 0 80px 10px;
+}
+.enviarMensagem{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+.enviarMensagem button{
+    padding: 10px 35px;
+    border: solid 1px black;
+    border-radius: 10px;
+    background-color: inherit;
+    color: var(--marromEscuro);
+}
+.enviarMensagem a{
+    color: inherit;
+    text-decoration: none;
+}

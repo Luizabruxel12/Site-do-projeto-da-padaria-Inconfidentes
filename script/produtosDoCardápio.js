@@ -1,4 +1,3 @@
-
 // DADOS DE CADA PRODUTO (OBJETO)
 export const itens = [
     {
@@ -231,6 +230,7 @@ const sessoesCategorias = {
 };
 const cardapio = document.getElementById("cardapio");
 
+
 // SALVANDO NO NAVEGADOR
 function salvarNoNavegador(id, titulo, preco, novaQuantidade, imagem) {
     try {
@@ -266,6 +266,7 @@ function salvarNoNavegador(id, titulo, preco, novaQuantidade, imagem) {
     }
 }
 
+
 // FUNÇÃO AUXILIAR DE LEITURA
 function obterQuantidadeSalva(idItem) {
     const carrinho = JSON.parse(localStorage.getItem('carrinhoTemporario')) || [];
@@ -273,7 +274,8 @@ function obterQuantidadeSalva(idItem) {
     return itemSalvo ? itemSalvo.quantidade : 0;
 }
 
-// FUNÇÃO PARA RENDERIZAR OS PRODUTOS (Variáveis e classes corrigidas)
+
+// FUNÇÃO PARA RENDERIZAR OS PRODUTOS
 function renderizarCardapio(cardapio, sessoesCategorias, itens) { 
     if (!cardapio) return; 
     
@@ -313,7 +315,7 @@ function renderizarCardapio(cardapio, sessoesCategorias, itens) {
                 <div class="produtosContainer"> 
                     <div class="complementosProdutos"> 
                         <div class="controle-quantidade">
-                            <button class="comprar">Comprar</button>
+                            <button class="comprar"><a href="../html/sacolaDePedidos.html">Comprar</a></button>
                             <button class="btn-menos">-</button>
                             <span class="contador-qtd">${quantidade}</span>
                             <button class="btn-mais">+</button>
@@ -327,23 +329,19 @@ function renderizarCardapio(cardapio, sessoesCategorias, itens) {
             const btnMenos = card.querySelector(".btn-menos");
             const contadorExibicao = card.querySelector(".contador-qtd");
             
-            // NOVO: Ação do botão Comprar (Adiciona 1 unidade e vai para o carrinho)
             btnComprar.addEventListener("click", () => {
                 if (quantidade === 0) {
                     quantidade = 1;
                     contadorExibicao.textContent = quantidade;
                 }
-                // Importante: Passando "item.imagem" como 5º parâmetro para salvar no localStorage
                 salvarNoNavegador(item.id, item.titulo, item.preco, quantidade, item.imagem);
                 
-                // Redireciona o usuário para a página do carrinho (ajuste o caminho se necessário)
                 window.location.href = "../html/carrinho.html"; 
             });
             
             btnMais.addEventListener("click", () => {
                 quantidade++;
                 contadorExibicao.textContent = quantidade;
-                // Adicionado item.imagem no final
                 salvarNoNavegador(item.id, item.titulo, item.preco, quantidade, item.imagem);
             });
             
@@ -351,7 +349,6 @@ function renderizarCardapio(cardapio, sessoesCategorias, itens) {
                 if (quantidade > 0) {
                     quantidade--;
                     contadorExibicao.textContent = quantidade;
-                    // Adicionado item.imagem no final
                     salvarNoNavegador(item.id, item.titulo, item.preco, quantidade, item.imagem);
                 }
             });

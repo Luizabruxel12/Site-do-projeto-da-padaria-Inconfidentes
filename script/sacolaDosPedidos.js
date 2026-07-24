@@ -19,7 +19,7 @@ function mostrarProdutos(){
         let valorTotalItem = item.preco * item.quantidade; 
         subtotalGeral += valorTotalItem; 
 
-        // CRIA O VISUAL (Corrigido para alterarQuantidade)
+        // CRIA O VISUAL 
         caixa.innerHTML += ` 
         <div class="espacoItemCarrinho"> 
             <div class="itemImagem"> 
@@ -45,7 +45,6 @@ function mostrarProdutos(){
     atualizarTudo(subtotalGeral); 
 } 
 
-// Nome da função corrigido para bater com o HTML dos botões
 function alterarQuantidade(id, modificador) { 
     let sacola = JSON.parse(localStorage.getItem('carrinhoTemporario')) || []; 
     let item = sacola.find(produto => produto.id == id); 
@@ -53,7 +52,6 @@ function alterarQuantidade(id, modificador) {
     if (item){ 
         item.quantidade += modificador; 
         
-        // Se a quantidade chegar a zero ou menos, remove do carrinho
         if (item.quantidade <= 0) { 
             sacola = sacola.filter(produto => produto.id != id); 
         } 
@@ -71,27 +69,24 @@ function deletarItem(id) {
 } 
 
 function atualizarTudo(subtotal) { 
-    let taxaEntrega = subtotal > 0 ? 15.00 : 0.00; 
+    const opcaoEntregaMarcarda = document.getElementById('opcaoEntrega')?.classList.contains('selecionado');
+    let taxaEntrega = (subtotal > 0 && opcaoEntregaMarcarda) ? 15.00 : 0.00; 
     
     // REGRA DO CUPOM EM TEMPO REAL: 
-    // Se o cupom estiver ativo E o subtotal continuar acima de R$ 30, o desconto será de 10% do subtotal.
-    // Caso contrário (se o usuário removeu itens e baixou de R$ 30), o cupom perde a validade automaticamente.
     let taxaDesconto = 0.00;
     if (cupomAtivo && subtotal > 30.00) {
-        taxaDesconto = subtotal * 0.10; // Calcula 10% do subtotal (sem frete)
+        taxaDesconto = subtotal * 0.10; 
     } else if (cupomAtivo && subtotal <= 30.00) {
-        // Alerta visual discreto na mensagem caso o valor caia abaixo do mínimo
         const divMensagem = document.getElementById("mensagemCupom");
         if (divMensagem) {
             divMensagem.innerText = "Cupom removido: o valor mínimo deve ser maior que R$ 30,00.";
             divMensagem.className = "mensagem-cupom erro";
         }
-        cupomAtivo = false; // Desativa o cupom de vez
+        cupomAtivo = false; 
     }
 
     let totalGeral = subtotal + taxaEntrega - taxaDesconto; 
 
-    // Atualiza os produtos adicionados
     let sacola = JSON.parse(localStorage.getItem('carrinhoTemporario')) || [];
     let quantidadeDeProdutos = sacola.reduce((acumulador, item) => acumulador + item.quantidade, 0);
     
@@ -100,7 +95,6 @@ function atualizarTudo(subtotal) {
         elementoQtd.innerText = `${quantidadeDeProdutos} produtos adicionados`;
     }
 
-    // Atualiza as telas de valores
     document.getElementById('subtotalValor').innerText = `R$ ${subtotal.toFixed(2).replace('.', ',')}`; 
     document.getElementById('entregaValor').innerText = `R$ ${taxaEntrega.toFixed(2).replace('.', ',')}`; 
     document.getElementById('descontoValor').innerText = `R$ ${taxaDesconto.toFixed(2).replace('.', ',')}`; 
@@ -110,6 +104,7 @@ function atualizarTudo(subtotal) {
         elementoTotal.innerText = `R$ ${totalGeral.toFixed(2).replace('.', ',')}`;
     }
 }
+
 
 function irParaPagamento() { 
     let sacola = JSON.parse(localStorage.getItem('carrinhoTemporario')) || []; 
@@ -144,7 +139,6 @@ window.alternarCupom = alternarCupom;
 let cupomAtivo = false;
 
 
-// 2. FUNÇÃO VALIDARCUPOM ATUALIZADA
 function validarCupom() {
     const inputCupom = document.getElementById("cupomTexto");
     const divMensagem = document.getElementById("mensagemCupom");
@@ -195,24 +189,24 @@ function validarCupom() {
         mostrarProdutos();
     }
 }
-// Vincula a função modificada ao escopo global
+
 window.validarCupom = validarCupom;
 
 function removerCupom() {
     const divMensagem = document.getElementById("mensagemCupom");
     const inputCupom = document.getElementById("cupomTexto");
 
-    cupomAtivo = false; // Desativa a regra de desconto
+    cupomAtivo = false; 
 
     if (divMensagem) {
         divMensagem.innerHTML = "";
-        divMensagem.className = "mensagem-cupom"; // Limpa as classes de estilo e esconde a div
+        divMensagem.className = "mensagem-cupom"; 
     }
 
     if (inputCupom) {
-        inputCupom.value = ""; // Limpa o campo de texto digitado
+        inputCupom.value = ""; 
     }
 
-    mostrarProdutos(); // Recalcula o carrinho sem o desconto
+    mostrarProdutos(); 
 }
 window.removerCupom = removerCupom;

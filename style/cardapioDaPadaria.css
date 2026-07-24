@@ -45,6 +45,10 @@
     align-items: center;
     gap: 10px;
 }
+.controle-quantidade a{
+    color: inherit;
+    text-decoration: none;
+}
 .comprar{
     background-color: #FEDBEB;
     border: none;
