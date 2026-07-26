@@ -1,0 +1,42 @@
+.linhaDivisao{
+    border: solid 1px var(--corDestaque);
+    width: 50%;
+    align-self: center;
+}
+.apresentacaoSobreNos{
+    display: flex;
+}
+.textoSobreNos{
+    display: flex;
+    justify-content: space-between;
+}
+.textoSobreNos p{
+    margin-left: 10px;
+    width: 60%;
+    color: var(--marromEscuro);
+}
+.textoSobreNos img{
+    width: 40%;
+    height: 270px;
+    align-self: center;
+}
+.sobre{
+    color: var(--marromEscuro);
+    margin-top: 20px;
+    flex-direction: column;
+    text-align: center;
+}
+.sobre h5{
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+.sobre p{
+    text-align: left;
+    margin: 0 15px 40px 15px;
+}
+.sobre img{
+    width: 38px;
+    height: 38px;
+    align-self: center;
+}

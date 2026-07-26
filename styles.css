@@ -8,6 +8,7 @@
 @import url('./style/carrinho.css');
 @import url('./style/pagamento.css');
 @import url('./style/contato.css');
+@import url('./style/sobreNos.css');
 
 :root{
     --corBase:#F9ECDA;
