@@ -5,42 +5,42 @@ export const itens = [
         categoria: "paoDeQueijo",
         imagem: "../src/pao_de_queijo_tradicional.png",
         titulo: "Pão de Queijo Tradicional",
-        preco: "R$ 8,00"
+        preco: "R$ 5,00"
     },
     {
         id:2,
         categoria: "paoDeQueijo",
         imagem: "../src/pao_de_queijo_de_catupiry.png",
         titulo: "Pão de Queijo de Queijo Catupiry",
-        preco: "R$ 8,00"
+        preco: "R$ 7,30"
     },
     {
         id:3,
         categoria: "paoDeQueijo",
         imagem: "../src/pao_de_queijo_com_frango.png",
         titulo: "Pão de Queijo de Frango",
-        preco: "R$ 8,00"
+        preco: "R$ 3,00"
     },
     {
         id:4,
         categoria: "paoDeQueijo",
         imagem: "../src/pao_de_queijo_calabresa.png",
         titulo: "Pão de Queijo de Calabresa",
-        preco: "R$ 8,00"
+        preco: "R$ 7,30"
     },
     {
         id:5,
         categoria: "paoDeQueijo",
         imagem: "../src/pao_de_queijo_com_bacon.png",
         titulo: "Pão de Queijo de Queijo de Bacon",
-        preco: "R$ 8,00"
+        preco: "R$ 4,39"
     },
     {
         id:6,
         categoria: "paoDeQueijo",
         imagem: "../src/pao_de_queijo_com_carne.png",
         titulo: "Pão de Queijo de Carne",
-        preco: "R$ 8,00"
+        preco: "R$ 3,00"
     },
     {
         id:7,
@@ -54,112 +54,112 @@ export const itens = [
         categoria: "paoDeQueijo",
         imagem: "../src/pao_de_queijo_com_requeijao_cremoso.png",
         titulo: "Pão de Queijo de Requeijão Cremoso",
-        preco: "R$ 8,00"
+        preco: "R$ 9,80"
     },
     {
         id:9,
         categoria: "cafes",
         imagem: "../src/cafe_tradicional.png",
         titulo: "Café Tradicional",
-        preco: "R$ 9,00"
+        preco: "R$ 10,00"
     },
     {
         id:10,
         categoria: "cafes",
         imagem: "../src/cafe_com_leite.png",
         titulo: "Café com Leite",
-        preco: "R$ 10,00"
+        preco: "R$ 10,05"
     },
     {
         id:11,
         categoria: "cafes",
         imagem: "../src/cafe_mocha_chocolate.png",
         titulo: "Café mocha (chocolate)",
-        preco: "R$ 15,00"
+        preco: "R$ 15,20"
     },
     {
         id:12,
         categoria: "cafes",
         imagem: "../src/cafe_caramelo.png",
         titulo: "Café com caramelo",
-        preco: "R$ 15,00"
+        preco: "R$ 14,90"
     },
     {
         id:13,
         categoria: "cafes",
         imagem: "../src/cafe_baunilha.png",
         titulo: "Café com Baunilha",
-        preco: "R$ 15,00"
+        preco: "R$ 14,00"
     },
     {
         id:14,
         categoria: "cafes",
         imagem: "../src/cafe_creme_de_avela.png",
         titulo: "Café com Creme de Avelã",
-        preco: "R$ 10,00"
+        preco: "R$ 13,00"
     },
     {
         id:15,
         categoria: "cafes",
         imagem: "../src/cafe_canela.png",
         titulo: "Café com Canela",
-        preco: "R$ 10,00"
+        preco: "R$ 12,05"
     },
     {
         id:16,
         categoria: "cafes",
         imagem: "../src/cafe_gelado.png",
         titulo: "Café Gelado",
-        preco: "R$ 9,00"
+        preco: "R$ 10,05"
     },
     {
         id:17,
         categoria: "cappuccino",
         imagem: "../src/cappuccino_tradicional.png",
         titulo: "Cappuccino Tradicional",
-        preco: "R$ 20,00"
+        preco: "R$ 25,00"
     },
     {
         id:18,
         categoria: "cappuccino",
         imagem: "../src/cappuccino_nutella.png",
         titulo: "Cappucciono Nutella",
-        preco: "R$ 25,00"
+        preco: "R$ 30,10"
     },
     {
         id:19,
         categoria: "cappuccino",
         imagem: "../src/cappuccino_doce_de_leite.png",
         titulo: "Cappuccino Doce de Leite",
-        preco: "R$ 25,00"
+        preco: "R$ 31,00"
     },
     {
         id:20,
         categoria: "cappuccino",
         imagem: "../src/cappuccino_leite_ninho.png",
         titulo: "Cappuccino de Leite Ninho",
-        preco: "R$ 25,00"
+        preco: "R$ 32,10"
     },
     {
         id:21,
         categoria: "bebidas",
         imagem: "../src/cha.png",
         titulo: "Chá",
-        preco: "R$ 5,00"
+        preco: "R$ 13,10"
     },
     {
         id:22,
         categoria: "bebidas",
         imagem: "../src/suco_laranja.png",
         titulo: "Suco de Laranja",
-        preco: "R$ 15,00"
+        preco: "R$ 13,15"
     },
     {
         id:23,
         categoria: "bebidas",
         imagem: "../src/vinho.png",
         titulo: "Vinho",
-        preco: "R$ 45,00"
+        preco: "R$ 38,20"
     },
     {
         id:24,
